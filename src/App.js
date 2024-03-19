@@ -4,8 +4,8 @@ import './App.css';
 const App = () => {
   const [input,setInput] = useState("");
   const [result,setResult] = useState(0);
-  const handler = e =>{
-    setInput(e.target.value);
+  const handler = k =>{
+    setInput(k.target.value);
   }
   return (
     <div>
@@ -32,6 +32,14 @@ const App = () => {
         <button onClick={() => setInput(input+'*')}>*</button>
         <button onClick={() => setInput(input+'/')}>/</button>
         <button onClick={() => {setInput('');setResult(0)}}>clr</button><br /> 
+        
+      <button onClick={() => setInput('Math.sqrt( )')}>√</button>
+    
+      <button onClick={() => setInput('Math.pow( )')}>^</button>
+      <button onClick={() => setInput('Math.sin( )')}>sin</button>
+      <button onClick={() => setInput('Math.cos( )')}>cos</button>
+      <button onClick={() => setInput('Math.tan( )')}>tan</button>
+        
 
       </center>
     </div>
